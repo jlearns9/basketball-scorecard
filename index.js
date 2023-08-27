@@ -1,47 +1,52 @@
-// HOME //
-let homeEl = document.getElementById("home-el")
-let homeScore = 0
+document.addEventListener('DOMContentLoaded', (event) => {
 
-function homeincrement1() {
-    homeScore += 1
-    homeEl.innerText = homeScore
-}
+    let homeEl = document.getElementById("home-el");
+    let homeScore = 0;
 
-function homeincrement2() {
-    homeScore += 2
-    homeEl.innerText = homeScore
-}
+    let guestEl = document.getElementById("guest-el");
+    let guestScore = 0;
 
-function homeincrement3() {
-    homeScore += 3
-    homeEl.innerText = homeScore
-}
+    function incrementScore(target, value) {
+        if (target === 'home') {
+            homeScore += value;
+            homeEl.innerText = homeScore;
+        } else if (target === 'guest') {
+            guestScore += value;
+            guestEl.innerText = guestScore;
+        }
+    }
 
-// GUEST //
+    function reset() {
+        homeScore = 0;
+        guestScore = 0;
+        homeEl.innerText = homeScore;
+        guestEl.innerText = guestScore;
+    }
 
-let guestEl = document.getElementById("guest-el")
-let guestScore = 0
+    window.homeincrement1 = function() {
+        incrementScore('home', 1);
+    }
 
-function guestincrement1() {
-    guestScore += 1
-    guestEl.innerText = guestScore
-}
+    window.homeincrement2 = function() {
+        incrementScore('home', 2);
+    }
 
-function guestincrement2() {
-    guestScore += 2
-    guestEl.innerText = guestScore
-}
+    window.homeincrement3 = function() {
+        incrementScore('home', 3);
+    }
 
-function guestincrement3() {
-    guestScore += 3
-    guestEl.innerText = guestScore
-}
+    window.guestincrement1 = function() {
+        incrementScore('guest', 1);
+    }
 
-// RESET //
+    window.guestincrement2 = function() {
+        incrementScore('guest', 2);
+    }
 
-function reset() {
-    homeScore -= homeScore
-    homeEl.innerText = homeScore
-    guestScore -= guestScore
-    guestEl.innerText = guestScore
-}
+    window.guestincrement3 = function() {
+        incrementScore('guest', 3);
+    }
+
+    window.reset = reset;
+
+});
