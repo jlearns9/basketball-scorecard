@@ -88,4 +88,6 @@ function reset() {
     foulHomeEl.innerText = foulHome
     foulGuestEl.innerText = foulGuest
     periodEl.innerText = period
+    scoreHomeEl.classList.remove("higher-score");
+    scoreGuestEl.classList.remove("higher-score");
 }
