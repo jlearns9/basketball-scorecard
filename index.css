@@ -5,9 +5,21 @@
 
 body {
     margin: auto;
-    background: #1B244A;
     width: 575px;
-    height: 385px;    
+    height: 385px;
+    background-image: url(background7.jpg);
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px 0 0;
+    border: 12px double black;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(26,151,163,1) 100%);
+}
+
+#spurs-img {
+    height: 150px;
 }
 
 h2 {
@@ -20,36 +32,37 @@ h2 {
     line-height: 126.666px;
     background-color: black;
     width: 155px;
-    height: 120px;
     border-radius: 5px;
-    margin: 26px 0;
+    margin: 26px;
 }
 
 h3 {
     color: #EEE;
-    text-align: center;
     font-family: Verdana;
     font-size: 40px;
     font-weight: 700;
-    margin: 50px 0 26px;
+    margin: 20 0;
+    text-shadow: 2px 1px black;
+    
+}
+
+.scoreboard {
+    border: 12px double black;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(26,151,163,1) 100%);
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
     justify-content: space-around;
+    margin: 0 0 20;
+    text-align: center;
 }
 
 button {
     border-radius: 5px;
-    border: 2px solid #9AABD8;
-    color: #9AABD8;
-    font-family: Cursed Timer ULiL;
-    font-size: 18px;
-    background-color: transparent;
+    border: 3px solid black;
     font-family: 'NewFont';
-    margin: 2px 2px;
+    margin: 0 2px;
     padding: 3px 8px;
 }
 
@@ -58,9 +71,28 @@ button {
 }
 
 .reset-button {
-    margin: 50px auto;
+    margin: 20px auto;
     display: flex;
-    font-size: 50px;
+    font-size: 30px;
     color: green;
     padding: 6px 12px;
+}
+
+.higher-score {
+    color: green;
+}
+
+.foul-text {
+    color: #ff3000;
+    font-size: 20;
+}
+
+.period-text {
+    color: grey;
+    font-size: 22;
+}
+
+#period-el, #foul-guest-el, #foul-home-el {
+    color: black;
+    font-size: 20;
 }
